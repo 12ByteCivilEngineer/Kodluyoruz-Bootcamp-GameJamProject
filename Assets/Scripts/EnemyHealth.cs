@@ -6,10 +6,10 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField]
-    private float startHealth = 2;
+    private int startHealth = 2;
 
  
-    private float currentHealth;
+    private int currentHealth;
 
     private void OnEnable()
     {
@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
 
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 

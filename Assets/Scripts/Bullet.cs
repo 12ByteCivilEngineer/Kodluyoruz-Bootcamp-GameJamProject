@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
 
     [SerializeField]
     [Range(1, 10)]
-    private float damage = 1f;
+    private int damage = 1;
 
     [SerializeField]
     private GameObject hitEffect;
@@ -25,14 +25,14 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider hitInfo)
     {
-        var healt = hitInfo.GetComponent<EnemyHealth>();
+        var healt = hitInfo.GetComponentInParent<EnemyHealth>();
         if (healt != null)
         {
             healt.TakeDamage(damage);
         }
-        
+
         Destroy(gameObject);
-        
+
     }
 
 }

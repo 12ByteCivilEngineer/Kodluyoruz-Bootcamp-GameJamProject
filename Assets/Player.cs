@@ -6,6 +6,6 @@ public class Player : Entity
 {
     private void Update()
     {
-        Debug.Log(transform.position);
+
     }
 }

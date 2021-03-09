@@ -25,7 +25,6 @@ public class LaserLine : MonoBehaviour
             if (hit.collider)
             {
                 lr.SetPosition(1, new Vector3(0f,0f,hit.distance) /5f);
-                Debug.Log(hit.point);
             }
         }
         else lr.SetPosition(1, Vector3.forward *1000f);

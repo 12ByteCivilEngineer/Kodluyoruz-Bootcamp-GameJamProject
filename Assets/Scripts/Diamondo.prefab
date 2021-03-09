@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 7506850948467266066}
   - component: {fileID: -7931391807294297228}
   - component: {fileID: 3618451552233042867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Diamondo
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,5 +126,5 @@ MonoBehaviour:
   speed: 20
   rb: {fileID: 7506850948467266066}
   damage: 1
-  hitEffect: {fileID: 292850628055036093, guid: 9a9c9181c90e3f647b8ed2015700bc0d,
+  hitEffect: {fileID: 1599315238913598529, guid: 46ffadbb188f9ab498b623c4290ef656,
     type: 3}
