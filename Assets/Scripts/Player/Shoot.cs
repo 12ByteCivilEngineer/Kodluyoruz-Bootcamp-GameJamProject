@@ -25,33 +25,35 @@ public class Shoot : MonoBehaviour
     public Slider shootSlider;
 
 
-
+    private void Start()
+    {
+        shootSlider.maxValue = fireRate;
+    }
 
     void Update()
     {
-        if (shootSlider.value < 10)
+        if (shootSlider.value < fireRate)
         {
             shootSlider.value = bartimer;
 
-            if (bartimer < 10)
+            if (bartimer < fireRate)
             {
-                bartimer = bartimer + 0.1f;
+                bartimer = bartimer + Time.deltaTime;
             }
         }
         else
         {
-            timer += Time.deltaTime;
-            if (timer >= fireRate)
-            {
+            //timer += Time.deltaTime;
+            //if (timer >= fireRate)
+            //{
                 if (Input.GetButtonDown("Fire1"))
                 {
-                    Debug.Log("Ateş ETTİM");
                     shootSlider.value = 0f;
-                    bartimer = 0.1f;
+                    bartimer = 0f;
                     timer = 0f;
                     FireGun();
                 }
-            }
+            //}
         }
     }
 

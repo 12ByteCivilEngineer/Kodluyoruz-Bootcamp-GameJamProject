@@ -22,7 +22,7 @@ public class CameraFollow : MonoBehaviour
         
         transform.LookAt(lerpPositionTarget);
 
-        if (Game.isGameOver || !Game.isGameRunning)
+        if (GameManager.isGameOver || !GameManager.isGameRunning)
         {
             speed = 0f;
         }

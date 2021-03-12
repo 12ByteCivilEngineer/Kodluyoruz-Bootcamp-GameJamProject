@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        rb.velocity = transform.forward * speed;
+        rb.velocity = transform.parent.forward * speed;
     }
 
     private void OnTriggerEnter(Collider hitInfo)

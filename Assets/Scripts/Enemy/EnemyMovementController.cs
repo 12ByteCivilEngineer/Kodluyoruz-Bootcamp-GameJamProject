@@ -41,7 +41,7 @@ public class EnemyMovementController : MonoBehaviour
             return;
         }
         targetVector = GameManager.ObjectToFollow[followIndex].transform.position - transform.position;
-
+        Debug.Log(targetVector);
         if (isFoe)
         {
             MovementAsFoe();

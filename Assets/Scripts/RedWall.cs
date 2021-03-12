@@ -16,11 +16,8 @@ public class RedWall : MonoBehaviour
 
     IEnumerator MoveCoroutine()
     {
-
         yield return new WaitForSeconds(waitSecond);
         speed = moveSpeed;
-
-
     }
 
     private void LateUpdate()
@@ -37,7 +34,7 @@ public class RedWall : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Game.isGameOver = true;
+            GameManager.isGameOver = true;
             Debug.Log("Game over");
         }
     }

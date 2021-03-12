@@ -9,7 +9,7 @@ public class LaserLine : MonoBehaviour
     [SerializeField]
     Vector3 correctionVector;
     LayerMask layermask;
-
+    [SerializeField] Transform raycastPoint;
 
     void Start()
     {
@@ -23,11 +23,12 @@ public class LaserLine : MonoBehaviour
     {
         lr.SetPosition(0, correctionVector); 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + correctionVector, transform.forward, out hit,layermask))
+        Debug.DrawRay(raycastPoint.position, transform.forward*1000f);
+        if (Physics.Raycast(raycastPoint.position, transform.forward, out hit,layermask))
         {
             if (hit.collider)
             {
-                lr.SetPosition(1, (new Vector3(0f,0f,hit.distance) /5f) + correctionVector);
+                lr.SetPosition(1, ((new Vector3(0f,0f,hit.distance/4f))+correctionVector) );
             }
         }
         else lr.SetPosition(1, Vector3.forward *1000f + correctionVector);
