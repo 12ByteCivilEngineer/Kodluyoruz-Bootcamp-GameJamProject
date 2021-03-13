@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     EnemyMovementController enemyMovementController;
     [SerializeField] GameObject turnFriendlyVFX;
-    bool isFoe = true;
+    public bool IsFoe { get; private set; }
     [SerializeField]
     Material friendlyMaterial;
     [SerializeField]
@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
+        IsFoe = true;
         enemyMovementController = GetComponent<EnemyMovementController>();
         _renderer = GetComponentInChildren<Renderer>();
 
@@ -24,7 +25,7 @@ public class Enemy : MonoBehaviour
     {
         _renderer.material = friendlyMaterial;
         Instantiate(turnFriendlyVFX, transform.position, Quaternion.identity);
-        isFoe = false;
+        IsFoe = false;
         GameManager.ObjectToFollow.Add(gameObject);
         enemyMovementController.FollowIndex = GameManager.ObjectToFollow.Count - 2;
         enemyMovementController.Foe = false;

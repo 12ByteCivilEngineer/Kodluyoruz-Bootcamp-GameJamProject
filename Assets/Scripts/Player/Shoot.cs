@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class Shoot : MonoBehaviour
 {
     [SerializeField]
-    [Range(0.5f, 1.5f)]
+    //[Range(0.5f, 1.5f)]
     private float fireRate = 1f;
 
-   
+    AudioSource audioSource;
+
 
     private float timer;
     private float bartimer = 0.1f;
@@ -28,6 +29,8 @@ public class Shoot : MonoBehaviour
     private void Start()
     {
         shootSlider.maxValue = fireRate;
+        audioSource = GetComponent<AudioSource>();
+
     }
 
     void Update()
@@ -48,6 +51,8 @@ public class Shoot : MonoBehaviour
             //{
                 if (Input.GetButtonDown("Fire1"))
                 {
+                    audioSource.Play();
+
                     shootSlider.value = 0f;
                     bartimer = 0f;
                     timer = 0f;

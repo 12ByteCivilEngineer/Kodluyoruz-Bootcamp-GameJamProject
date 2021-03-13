@@ -21,5 +21,15 @@ public class GameManager : MonoBehaviour
             return;
         }
     }
+    public void GameWon()
+    {
+        isGameOver = true;
+        isGameRunning = false;
+
+    }
+    public void GameLost()
+    {
+
+    }
 
 }

@@ -32,16 +32,19 @@ public class EnemyMovementController : MonoBehaviour
 
     private void Update()
     {
+        if (!GameManager.isGameRunning)
+        {
+            return;
+        }
         Movement();
     }
     private void Movement()
     {
-        if (GameManager.ObjectToFollow[followIndex] == null)
+        if (GameManager.ObjectToFollow[followIndex] == null || !GameManager.isGameRunning)
         {
             return;
         }
         targetVector = GameManager.ObjectToFollow[followIndex].transform.position - transform.position;
-        Debug.Log(targetVector);
         if (isFoe)
         {
             MovementAsFoe();
