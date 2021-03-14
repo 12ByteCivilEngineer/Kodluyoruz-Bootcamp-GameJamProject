@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fieldOfViewDistance: 50
+  friendlyFollowDistance: 20
   speed: 20
 --- !u!114 &8866209175052245978
 MonoBehaviour:

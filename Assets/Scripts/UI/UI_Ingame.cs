@@ -13,11 +13,16 @@ public class UI_Ingame : MonoBehaviour
     {
         inGameScreen.SetActive(false);
         pauseScreen.SetActive(true);
+        Time.timeScale = 0f;
+        GameManager.isGameRunning = false;
     }
     public void InGameScreen()
     {
         pauseScreen.SetActive(false);
         inGameScreen.SetActive(true);
+        Time.timeScale = 1f;
+        GameManager.isGameRunning = true;
+
     }
 
     public void BackMenu()
