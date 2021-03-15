@@ -63,7 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\QuarterView 3D Action BE5\ReadMe\Scripts\Editor\ReadmeEditorBE5.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+    <Compile Include="Assets\Imported\QuarterView 3D Action BE5\ReadMe\Scripts\Editor\ReadmeEditorBE5.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/CCleaner/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -643,6 +644,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
@@ -681,6 +685,9 @@
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>

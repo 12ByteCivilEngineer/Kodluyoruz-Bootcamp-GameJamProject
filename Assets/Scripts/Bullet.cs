@@ -14,12 +14,10 @@ public class Bullet : MonoBehaviour
     [Range(1, 10)]
     private int damage = 1;
 
-    [SerializeField]
-    private GameObject hitEffect;
-
     void Start()
     {
         rb.velocity = transform.parent.forward * speed;
+        Destroy(gameObject, 20f);
     }
 
     private void OnTriggerEnter(Collider hitInfo)

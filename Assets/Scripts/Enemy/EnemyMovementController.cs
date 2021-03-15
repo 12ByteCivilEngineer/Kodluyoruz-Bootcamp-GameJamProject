@@ -14,6 +14,8 @@ public class EnemyMovementController : MonoBehaviour
     int followIndex = 0;
     float firstFriendlyFollowDistance;
     EnemyAnimatorController enemyAnimator;
+    public bool IsDead { get; set; }
+
     public int FollowIndex
     {
         set { followIndex = value; }
@@ -25,6 +27,7 @@ public class EnemyMovementController : MonoBehaviour
 
     private void Awake()
     {
+        IsDead = false;
         _rigidbody = GetComponent<Rigidbody>();
         firstFriendlyFollowDistance = friendlyFollowDistance * 2f;
         enemyAnimator = GetComponent<EnemyAnimatorController>();
@@ -44,6 +47,7 @@ public class EnemyMovementController : MonoBehaviour
         {
             return;
         }
+        if (IsDead) { return; }
         targetVector = GameManager.ObjectToFollow[followIndex].transform.position - transform.position;
         if (isFoe)
         {

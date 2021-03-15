@@ -11,17 +11,15 @@ public class UI_Ingame : MonoBehaviour
    
     public void PauseScreen()
     {
+        Time.timeScale = 0f;
         inGameScreen.SetActive(false);
         pauseScreen.SetActive(true);
-        Time.timeScale = 0f;
-        GameManager.isGameRunning = false;
     }
     public void InGameScreen()
     {
+        Time.timeScale = 1f;
         pauseScreen.SetActive(false);
         inGameScreen.SetActive(true);
-        Time.timeScale = 1f;
-        GameManager.isGameRunning = true;
 
     }
 

@@ -8,12 +8,10 @@ public class RedWall : MonoBehaviour
     float speed = 0f;
     public float moveSpeed = 5f;
     Rigidbody wall;
-    AudioSource audioSource;
     private void Start()
     {
         wall = GetComponent<Rigidbody>();
         StartCoroutine(MoveCoroutine());
-        audioSource = GetComponent<AudioSource>();
     }
 
     IEnumerator MoveCoroutine()
@@ -30,15 +28,5 @@ public class RedWall : MonoBehaviour
     void MoveRight()
     {
         wall.velocity = transform.right * speed;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            audioSource.Play();
-            GameManager.isGameOver = true;
-            Debug.Log("Game over");
-        }
     }
 }

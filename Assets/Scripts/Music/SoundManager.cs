@@ -7,7 +7,6 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] Image soundOnIcon;
     [SerializeField] Image soundOffIcon;
-
     private bool muted = false;
 
     private void Start()

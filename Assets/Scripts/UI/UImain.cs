@@ -13,7 +13,7 @@ public class UImain : MonoBehaviour
     public void StartGame()
     {
         //Game Start
-        SceneManager.LoadScene("GameSceneNew");
+        SceneManager.LoadScene(1);
         Debug.Log("oyun başlıyor.");
     }
     public void Setting()

@@ -4,32 +4,31 @@ using UnityEngine;
 
 public class AnimationController : MonoBehaviour
 {
-
-    Animator anim;
-    PlayerInputController playerInputController;
-    // Start is called before the first frame update
+    [HideInInspector]
+    public Animator anim;
+    GameManager gameManager;
+    bool isDead = false;
+    BoxCollider _collider;
+    Rigidbody rb;
     void Start()
     {
         anim = GetComponent<Animator>();
-        playerInputController = GetComponent<PlayerInputController>();
+        gameManager = FindObjectOfType<GameManager>();
+        _collider = GetComponentInChildren<BoxCollider>();
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*if (Mathf.Abs(playerInputController.VerticalInput)>=Mathf.Epsilon || Mathf.Abs(playerInputController.HorizontalInput) >= Mathf.Epsilon)
+        if (!isDead)
         {
-            anim.SetBool("isRunning", true);
+            MovementAnims();
         }
-        else
-        {
-            anim.SetBool("isRunning", false);
+    }
 
-        }*/
-
+    private void MovementAnims()
+    {
         bool isShooting = anim.GetBool("isShooting");
-
-
         if (Input.GetKeyDown(KeyCode.W))
         {
             anim.SetBool("isRunning", true);
@@ -73,10 +72,18 @@ public class AnimationController : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             anim.SetBool("isShooting", false);
-           
         }
+    }
 
-
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Traps"))
+        {
+            rb.isKinematic = true;
+            _collider.enabled = false;
+            isDead = true;
+            anim.SetTrigger("isDieTr");
+            gameManager.GameLost();
+        }
     }
 }

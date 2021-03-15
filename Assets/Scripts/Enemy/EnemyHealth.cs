@@ -35,7 +35,6 @@ public class EnemyHealth : MonoBehaviour
     private void EnemyDie()
     {
         enemy.TurnFriendly();
-        Debug.Log("turn friendly");
     }
     
 }

@@ -12,14 +12,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     Renderer _renderer;
 
-
-
     private void Awake()
     {
         IsFoe = true;
         enemyMovementController = GetComponent<EnemyMovementController>();
         _renderer = GetComponentInChildren<Renderer>();
-
     }
     public void TurnFriendly()
     {

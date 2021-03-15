@@ -10,22 +10,17 @@ public class PlayerMovementController : MonoBehaviour
     [Space]
     [SerializeField]
     private float angularSpeed = 1f;
-    Vector3 lerpPositionTarget = new Vector3();
-    [Space]
-    [SerializeField] float lerpCoefficient = 10f;
-
     private void Awake()
     {
         inputController = GetComponent<PlayerInputController>();
         _rigidbody = GetComponent<Rigidbody>();
     }
-    void FixedUpdate()
+    void Update()
     {
-        if (!GameManager.isGameRunning)
+        if (GameManager.isGameRunning)
         {
-            return;
+            Movement();
         }
-        Movement();
     }
     private void Movement()
     {
@@ -35,8 +30,7 @@ public class PlayerMovementController : MonoBehaviour
 
 
         _rigidbody.velocity = new Vector3(inputController.HorizontalInput, 0f, inputController.VerticalInput) * speed;
-        lerpPositionTarget = Vector3.Lerp(lerpPositionTarget, new Vector3(inputController.MousePosition.x, transform.position.y, inputController.MousePosition.z), lerpCoefficient * Time.deltaTime);
-        transform.LookAt(lerpPositionTarget);
+        transform.LookAt(new Vector3(inputController.MousePosition.x, transform.position.y, inputController.MousePosition.z));
 
 
         // OLD MOVEMENT SYSTEM

@@ -5,11 +5,8 @@ using UnityEngine;
 public class EnemyAnimatorController : MonoBehaviour
 {
     Animator animator;
-   
-
     void Start()
     {
-        //Get the Animator attached to the GameObject you are intending to animate.
         animator = gameObject.GetComponent<Animator>();
     }
     public void GameOver()
@@ -17,8 +14,6 @@ public class EnemyAnimatorController : MonoBehaviour
         animator.SetBool("Run", false);
         animator.SetBool("Attack", false);
         animator.SetBool("GameOver", true);
-
-
     }
 
     public void SetRunningTrue()

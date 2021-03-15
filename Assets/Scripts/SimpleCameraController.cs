@@ -112,7 +112,7 @@ namespace UnityTemplateProjects
             return direction;
         }
         
-        void FixedUpdate()
+        void Update()
         {
             Vector3 translation = Vector3.zero;
 

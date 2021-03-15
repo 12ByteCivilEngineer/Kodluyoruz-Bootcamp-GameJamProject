@@ -63,37 +63,48 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BridgeCreater.cs" />
-    <Compile Include="Assets\Challenge 1\Scripts\FollowPlayerX.cs" />
-    <Compile Include="Assets\Challenge 1\Scripts\PlayerControllerX.cs" />
-    <Compile Include="Assets\CutScene\CinemachineControl.cs" />
-    <Compile Include="Assets\EndGameCollider.cs" />
-    <Compile Include="Assets\EnemyDeath.cs" />
-    <Compile Include="Assets\FootStep.cs" />
-    <Compile Include="Assets\QuarterView 3D Action BE5\ReadMe\Scripts\ReadmeBE5.cs" />
+    <Compile Include="Assets\Imported\AurynSky\Dungeon Pack\Scripts\SpikeTrapDemo.cs" />
+    <Compile Include="Assets\Imported\CutScene\BridgeBuilder.cs" />
+    <Compile Include="Assets\Imported\CutScene\CinemachineControl.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
+    <Compile Include="Assets\Imported\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\Imported\QuarterView 3D Action BE5\ReadMe\Scripts\ReadmeBE5.cs" />
     <Compile Include="Assets\Scripts\AnimationController.cs" />
-    <Compile Include="Assets\Scripts\BridgeMaker.cs" />
+    <Compile Include="Assets\Scripts\BridgeCreater.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\Crosshair.cs" />
+    <Compile Include="Assets\Scripts\EndGameCollider.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovementController.cs" />
     <Compile Include="Assets\Scripts\EnemyAnimatorController.cs" />
+    <Compile Include="Assets\Scripts\EnemyDeath.cs" />
+    <Compile Include="Assets\Scripts\FootStep.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameManager\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\GameManager\Game.cs" />
-    <Compile Include="Assets\Scripts\GameManager\SaveZone.cs" />
     <Compile Include="Assets\Scripts\Misc\Entity.cs" />
     <Compile Include="Assets\Scripts\Misc\WaterCreator.cs" />
     <Compile Include="Assets\Scripts\Music\MusicScript.cs" />
     <Compile Include="Assets\Scripts\Music\SoundManager.cs" />
     <Compile Include="Assets\Scripts\ParticleCreator.cs" />
+    <Compile Include="Assets\Scripts\Player\GoToLocation.cs" />
     <Compile Include="Assets\Scripts\Player\LaserLine.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerColliderController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInputController.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementController.cs" />
     <Compile Include="Assets\Scripts\Player\Shoot.cs" />
     <Compile Include="Assets\Scripts\RedWall.cs" />
+    <Compile Include="Assets\Scripts\SeaColliderScript\SeaColliderScript.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
     <Compile Include="Assets\Scripts\TurnFriendlyVFX.cs" />
     <Compile Include="Assets\Scripts\UI\UI_Ingame.cs" />
@@ -132,10 +143,28 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\Course Library\_Source_Files\_LICENSE.txt" />
-    <None Include="Assets\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Imported\Customizable Skybox\Stylized Sky\Shaders\Stylized Sky.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/CCleaner/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -685,6 +714,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
     </Reference>
@@ -723,6 +755,9 @@
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>C:/Users/Dogu/Unity Oyun/DontKillAnything (1)/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>

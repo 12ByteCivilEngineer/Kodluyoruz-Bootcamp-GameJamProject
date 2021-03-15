@@ -6,10 +6,8 @@ public class WaterCreator : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject water;
-    Vector3 newTarget;
     void Start()
     {
-        newTarget = new Vector3(1f, 0f, 0f);
         for(int i = 0; i <= 50; i++)
         {
             for (int j = 0; j <= 50; j++)
@@ -17,12 +15,5 @@ public class WaterCreator : MonoBehaviour
                 Instantiate(water, transform.position + new Vector3(i*10f, 0f, j*10f), Quaternion.identity, this.transform.parent);
             }
         }
-        //Instantiate(water,transform.position+new Vector3())
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
